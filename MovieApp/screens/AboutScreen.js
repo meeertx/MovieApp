@@ -17,7 +17,8 @@ export default function AboutScreen({navigation}) {
   
   let [fontsLoaded] = useFonts({
     'Shrikhand' : require('../assets/fonts/Bricolage_Grotesque/Shrikhand-Regular.ttf'),
-    'Source-Variable' : require('../assets/fonts/Bricolage_Grotesque/SourceSerif4-VariableFont_opsz,wght.ttf'),
+    'SourceSerif4' : require('../assets/fonts/Bricolage_Grotesque/SourceSerif4-VariableFont_opsz,wght.ttf'),
+    'SourceSans' : require('../assets/fonts/Source_Sans_3/SourceSans3-VariableFont_wght.ttf'),
   })
   useEffect(()=>{
     setLoading(false);
@@ -65,11 +66,11 @@ export default function AboutScreen({navigation}) {
         </View>
 
         <View style={{top:430,alignItems:'center',justifyContent:'center'}}>
-            <Text style={{color:'#fff' ,fontSize:30,fontWeight:'bold',textAlign:'center'}}> The TMDB advantage </Text>
+            <Text style={{color:'#fff' ,fontSize:30,fontWeight:'bold',textAlign:'center',fontFamily:'Shrikhand'}}> The TMDB advantage </Text>
 
             <View style={{flexDirection:'row',marginVertical:8,width:450}}>
               <Text style={{color:'#d40242',fontSize:40,fontWeight:'bold',marginLeft:20,}}>1</Text>
-              <Text style={{color:'#fff',marginLeft:15,textAlign:'left',fontFamily:'Source-Variable'}}>
+              <Text style={{color:'#fff',marginLeft:15,textAlign:'left'}}>
                 Every year since 2008, the number of contributions
                 to our database has increased (check out our last years wrap!) With over 1,000,000 developers and companies using our platform, 
                 TMDB has become a premiere source for metadata.
@@ -78,7 +79,7 @@ export default function AboutScreen({navigation}) {
 
             <View style={{flexDirection:'row',marginVertical:8,width:450}}>
               <Text style={{color:'#d40242',fontSize:40,fontWeight:'bold',marginLeft:20,}}>2</Text>
-              <Text style={{color:'#fff',marginLeft:15,textAlign:'left',fontFamily:'Source-Variable'}}>     
+              <Text style={{color:'#fff',marginLeft:15,textAlign:'left'}}>     
                 Along with extensive metadata for movies, TV shows and people, 
                 we also offer one of the best selections of high resolution posters and fanart. 
                 On average, over 1,000 images are added every single day.
@@ -87,7 +88,7 @@ export default function AboutScreen({navigation}) {
 
             <View style={{flexDirection:'row',marginVertical:8,width:450}}>
               <Text style={{color:'#d40242',fontSize:40,fontWeight:'bold',marginLeft:20,}}>3</Text>
-              <Text style={{color:'#fff',marginLeft:15,textAlign:'left',fontFamily:'Source-Variable'}}>          
+              <Text style={{color:'#fff',marginLeft:15,textAlign:'left'}}>          
                 We're international. While we officially support 
                 39 languages we also have extensive regional data. 
                 Every single day TMDB is used in over 180 countries.
@@ -96,7 +97,7 @@ export default function AboutScreen({navigation}) {
 
             <View style={{flexDirection:'row',marginVertical:8,width:450}}>
               <Text style={{color:'#d40242',fontSize:40,fontWeight:'bold',marginLeft:20,}}>4</Text>
-              <Text style={{color:'#fff',marginLeft:15,textAlign:'left',fontFamily:'Source-Variable'}}>
+              <Text style={{color:'#fff',marginLeft:15,textAlign:'left'}}>
                 Our community is second to none. Between our staff and community moderators, we're always here to help. 
                 We're passionate about making sure your experience on TMDB is nothing short of amazing.
               </Text>
@@ -104,7 +105,7 @@ export default function AboutScreen({navigation}) {
 
             <View style={{flexDirection:'row',width:450}}>
               <Text style={{color:'#d40242',fontSize:40,fontWeight:'bold',marginLeft:20,}}>5</Text>
-              <Text style={{color:'#fff',marginLeft:15,textAlign:'left',fontFamily:'Source-Variable'}}>            
+              <Text style={{color:'#fff',marginLeft:15,textAlign:'left'}}>            
                 Trusted platform. Every single day our service is used by millions of people while we process over 3 billion requests.
                 We've proven for years that this is a service that can be trusted and relied on
               </Text>
@@ -126,7 +127,6 @@ const style = StyleSheet.create({
     paddingHorizontal: 8,
   },
   imageText:{
-    fontFamily:'',
     fontSize:90,
     fontWeight:'400',
     color:'#fff',
